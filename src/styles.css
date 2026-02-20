@@ -1,0 +1,134 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Pretendard', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+  background: #0f1115;
+  color: #e7ebf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1c2330, #0f1115 55%);
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.hero,
+.card {
+  background: #171b24;
+  border: 1px solid #2b3446;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-list a {
+  color: #83b6ff;
+  font-weight: 700;
+}
+
+.link-list p {
+  margin: 6px 0 0;
+  color: #c8d3e7;
+}
+
+.checklist-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+button {
+  border: 1px solid #4a6ca5;
+  border-radius: 8px;
+  background: #2d4f86;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.checklist li {
+  background: #121723;
+  border: 1px solid #273144;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.checklist label {
+  display: flex;
+  gap: 10px;
+}
+
+.checklist span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.checklist em {
+  color: #96aac8;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.progress {
+  margin-top: 0;
+  color: #b3c5df;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #2d3750;
+  text-align: left;
+  padding: 10px;
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 12px;
+  }
+
+  .hero,
+  .card {
+    padding: 14px;
+  }
+}
