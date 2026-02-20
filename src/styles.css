@@ -1,0 +1,215 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Pretendard', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+  background: #090c12;
+  color: #eaf0ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% -10%, #2a4f85 0%, transparent 35%),
+    radial-gradient(circle at 90% -15%, #4f2f86 0%, transparent 40%),
+    #090c12;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.hero,
+.card {
+  background: linear-gradient(180deg, #141b2a, #101623);
+  border: 1px solid #2c3a57;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.26);
+}
+
+.hero h1,
+h2 {
+  margin: 0 0 8px;
+}
+
+.hero p {
+  margin: 0;
+  color: #c1cce3;
+}
+
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #253a61;
+  color: #b6d2ff;
+  border: 1px solid #36598f;
+  font-size: 12px;
+}
+
+.link-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.link-card {
+  border: 1px solid #314463;
+  background: #10192a;
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #3c2a61;
+  color: #ddc8ff;
+}
+
+.link-card a {
+  color: #8ac2ff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link-card a:hover { text-decoration: underline; }
+
+.link-card p {
+  margin: 0;
+  color: #c7d4eb;
+  line-height: 1.45;
+}
+
+.checklist-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+}
+
+.sub {
+  margin: 4px 0 0;
+  color: #9eb1d3;
+  font-size: 13px;
+}
+
+button {
+  border: 1px solid #4a6ca5;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #3f67a5, #2c4e83);
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.progress-panel {
+  margin: 14px 0;
+  padding: 12px;
+  border: 1px solid #314360;
+  border-radius: 12px;
+  background: #0f1827;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: #c8d7f0;
+}
+
+.progress-track {
+  height: 10px;
+  background: #202f45;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #53a4ff, #7b8bff);
+  transition: width 0.2s ease;
+}
+
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.checklist li {
+  background: #10182a;
+  border: 1px solid #283a58;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.checklist li.is-done {
+  border-color: #3f6ea4;
+  background: #102133;
+}
+
+.checklist label {
+  display: flex;
+  gap: 10px;
+}
+
+.checklist span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checklist small {
+  color: #b8c8e6;
+  line-height: 1.35;
+}
+
+.checklist em {
+  color: #8fa8cc;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+th, td {
+  border-bottom: 1px solid #2d4061;
+  text-align: left;
+  padding: 10px;
+}
+
+@media (max-width: 720px) {
+  .container { padding: 12px; }
+  .hero, .card { padding: 14px; }
+  .progress-meta { flex-direction: column; }
+}
