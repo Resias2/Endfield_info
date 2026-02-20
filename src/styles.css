@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 20px;
   display: grid;
@@ -32,30 +32,32 @@ body {
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.26);
 }
 
+.top-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #bed8ff;
+  border: 1px solid #37537f;
+  background: #1c2a43;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
 .hero h1,
-h2 {
+h2,
+h3 {
   margin: 0 0 8px;
 }
 
-.hero p {
+.hero p,
+.sub {
   margin: 0;
   color: #c1cce3;
-}
-
-.section-title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-
-.pill {
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: #253a61;
-  color: #b6d2ff;
-  border: 1px solid #36598f;
-  font-size: 12px;
 }
 
 .link-grid {
@@ -63,7 +65,7 @@ h2 {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 12px;
 }
 
@@ -74,16 +76,6 @@ h2 {
   padding: 12px;
   display: grid;
   gap: 8px;
-}
-
-.badge {
-  font-size: 11px;
-  font-weight: 700;
-  width: fit-content;
-  padding: 4px 8px;
-  border-radius: 999px;
-  background: #3c2a61;
-  color: #ddc8ff;
 }
 
 .link-card a {
@@ -106,12 +98,6 @@ h2 {
   justify-content: space-between;
   align-items: end;
   gap: 10px;
-}
-
-.sub {
-  margin: 4px 0 0;
-  color: #9eb1d3;
-  font-size: 13px;
 }
 
 button {
@@ -194,18 +180,35 @@ button {
   font-style: normal;
 }
 
-.table-wrap { overflow-x: auto; }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 620px;
+.character-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
 }
 
-th, td {
-  border-bottom: 1px solid #2d4061;
-  text-align: left;
+.character-card {
+  background: #0f1827;
+  border: 1px solid #2c4268;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.character-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  background: #0a111f;
+}
+
+.character-meta {
   padding: 10px;
+}
+
+.character-meta p {
+  margin: 4px 0 0;
+  color: #b8c8e6;
 }
 
 @media (max-width: 720px) {
