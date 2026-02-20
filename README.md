@@ -7,18 +7,6 @@
 - `index.html` : 통합정보글 링크 + 일일 숙제 체크리스트
 - `characters.html` : 캐릭터 전용 아카이브 페이지(이미지 카드형)
 
-## 실행 전 준비
-
-- Git
-- Python 3
-
-확인 명령:
-
-```bash
-git --version
-python3 --version
-```
-
 ## 실행 방법
 
 ```bash
@@ -32,16 +20,16 @@ python3 -m http.server 4173 --bind 127.0.0.1
 - http://127.0.0.1:4173/index.html
 - http://127.0.0.1:4173/characters.html
 
-## 캐릭터 이미지 적용 방법
+## 통합정보글 링크
 
-`characters.html`은 아래 로컬 파일을 읽습니다.
+메인 페이지에는 통합정보글 접근 링크를 **1개만** 제공합니다.
 
-- `assets/characters/endministrator.jpg`
-- `assets/characters/perlica.jpg`
-- `assets/characters/chenqianyu.jpg`
-- `assets/characters/asuka.jpg`
+- 엔드필드 마이너 갤러리 통합정보글 검색 링크
 
-이미지가 없으면 자리표시(placeholder) 이미지가 표시됩니다.
+## 캐릭터 공식 이미지 적용
 
-> 참고: 현재 이 실행 환경에서는 외부 사이트 접근 제한(HTTP 403)으로 인해 공식 이미지를 자동 다운로드할 수 없습니다.
-> 따라서 실제 운영 시에는 공식 이미지 파일을 위 경로에 직접 배치해 주세요.
+아래 경로에 공식 이미지를 넣으면 캐릭터 아카이브에 반영됩니다.
+
+- `assets/characters/*.jpg`
+
+필요 파일명 목록은 `assets/characters/README.md`를 참고하세요.

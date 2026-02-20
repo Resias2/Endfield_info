@@ -1,17 +1,10 @@
 const { useMemo, useState } = React;
 
-const integratedPosts = [
-  {
-    title: '엔드필드 마이너 갤러리 통합정보글(공지 검색 바로가기)',
-    url: 'https://gall.dcinside.com/mgallery/board/lists/?id=arknightsendfield&s_type=search_subject_memo&s_keyword=%ED%86%B5%ED%95%A9%EC%A0%95%EB%B3%B4%EA%B8%80',
-    description: '공지 내 통합정보글 키워드 검색으로 바로 접근합니다. (공지 갱신 시에도 유효)'
-  },
-  {
-    title: '엔드필드 마이너 갤러리 공지 탭',
-    url: 'https://gall.dcinside.com/mgallery/board/lists/?id=arknightsendfield',
-    description: '통합정보글 본문 링크가 변경됐을 때 공지 탭에서 최신 글을 확인하세요.'
-  }
-];
+const integratedPost = {
+  title: '엔드필드 마이너 갤러리 통합 정보글 바로가기',
+  url: 'https://gall.dcinside.com/mgallery/board/lists/?id=arknightsendfield&s_type=search_subject_memo&s_keyword=%ED%86%B5%ED%95%A9%EC%A0%95%EB%B3%B4%EA%B8%80',
+  description: '공지 내 통합정보글 검색 결과로 바로 이동합니다.'
+};
 
 const dailyTasks = [
   { id: 'attendance', category: '이벤트', name: '출석 체크 및 누적 보상 수령', detail: '출석 페이지에서 일일/누적 탭 모두 확인', reward: '재화·소재', reset: '매일 04:00' },
@@ -29,7 +22,7 @@ const dailyTasks = [
 const storageKey = 'endfield-daily-checklist';
 
 function App() {
-  const [checked, setChecked] = useState(() => {
+  const [checked, setChecked] = React.useState(() => {
     try {
       return JSON.parse(localStorage.getItem(storageKey) ?? '{}');
     } catch {
@@ -66,14 +59,10 @@ function App() {
 
       <section className="card">
         <h2>1) 통합 정보글 링크</h2>
-        <ul className="link-grid">
-          {integratedPosts.map((post) => (
-            <li key={post.url} className="link-card">
-              <a href={post.url} target="_blank" rel="noreferrer">{post.title}</a>
-              <p>{post.description}</p>
-            </li>
-          ))}
-        </ul>
+        <div className="link-card single">
+          <a href={integratedPost.url} target="_blank" rel="noreferrer">{integratedPost.title}</a>
+          <p>{integratedPost.description}</p>
+        </div>
       </section>
 
       <section className="card">
