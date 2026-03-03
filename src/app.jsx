@@ -3,7 +3,7 @@ const { useMemo, useState } = React;
 const integratedPost = {
   title: '엔드필드 마이너 갤러리 통합 정보글 바로가기',
   url: 'https://gall.dcinside.com/mgallery/board/lists/?id=arknightsendfield&s_type=search_subject_memo&s_keyword=%ED%86%B5%ED%95%A9%EC%A0%95%EB%B3%B4%EA%B8%80',
-  description: '공지 내 통합정보글 검색 결과로 바로 이동합니다.'
+  description: '공지의 통합 정보글을 바로 찾도록 단일 링크로 구성했습니다.'
 };
 
 const dailyTasks = [
@@ -22,7 +22,7 @@ const dailyTasks = [
 const storageKey = 'endfield-daily-checklist';
 
 function App() {
-  const [checked, setChecked] = React.useState(() => {
+  const [checked, setChecked] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem(storageKey) ?? '{}');
     } catch {
@@ -59,7 +59,7 @@ function App() {
 
       <section className="card">
         <h2>1) 통합 정보글 링크</h2>
-        <div className="link-card single">
+        <div className="link-card">
           <a href={integratedPost.url} target="_blank" rel="noreferrer">{integratedPost.title}</a>
           <p>{integratedPost.description}</p>
         </div>
